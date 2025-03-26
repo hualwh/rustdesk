@@ -1969,7 +1969,7 @@ jobs:
       - build-rustdesk-linux
       - build-rustdesk-linux-sciter
     runs-on: ${{ matrix.job.on }}
-    if: false
+    if: False  
     strategy:
       fail-fast: false
       matrix:
