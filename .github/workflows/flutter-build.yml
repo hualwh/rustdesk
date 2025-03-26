@@ -1178,7 +1178,8 @@ jobs:
     if: False
     needs: [build-rustdesk-android]
     name: build rustdesk android universal apk
-    if: ${{ inputs.upload-artifact }}
+    if: False 
+    #${{ inputs.upload-artifact }}
     runs-on: ubuntu-20.04
     env:
       reltype: release
