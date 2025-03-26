@@ -1962,14 +1962,13 @@ jobs:
           files: |
             ./appimage/rustdesk-${{ env.VERSION }}-*.AppImage
 
-  build-flatpak:
-    if: False
+  build-flatpak:    
     name: Build flatpak ${{ matrix.job.target }}${{ matrix.job.suffix }}
     needs:
       - build-rustdesk-linux
       - build-rustdesk-linux-sciter
     runs-on: ${{ matrix.job.on }}
-    if: False  
+    if: False
     strategy:
       fail-fast: false
       matrix:
