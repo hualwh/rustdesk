@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter Debug",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "Rust Attach",
+      "request": "attach",
+      "type": "cppvsdbg",
+      "processId": "${command:pickProcess}"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Flutter+Rust",
+      "configurations": ["Flutter Debug", "Rust Attach"]
+    }
+  ]
+}

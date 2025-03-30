@@ -1,0 +1,14 @@
+# RustDesk Web API 配置
+[web]
+port = 58089  # Web服务监听端口 (1024-65535)
+token = "default_token_please_change"  # API访问令牌
+
+# 连接配置
+[connection]
+timeout = 30  # 超时时间(秒)
+max_retries = 3  # 最大重试次数
+
+# 安全配置
+[security]
+allow_localhost_only = true  # 是否仅允许本地访问
+enable_rate_limit = true  # 是否启用速率限制

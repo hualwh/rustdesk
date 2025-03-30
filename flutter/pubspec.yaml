@@ -48,7 +48,7 @@ dependencies:
   qr_code_scanner: ^1.0.0
   zxing2: ^0.2.0
   image_picker: ^1.1.2
-  image: ^4.0.17
+  image: ^4.2.3
   back_button_interceptor: ^6.0.1
   flutter_rust_bridge: "1.80.1"
   window_manager:
@@ -105,7 +105,7 @@ dependencies:
   pull_down_button: ^0.9.3
   device_info_plus: ^9.1.0
   qr_flutter: ^4.1.0
-  extended_text: 14.0.0
+  extended_text: ^14.0.0
 
 dev_dependencies:
   icons_launcher: ^2.0.4

@@ -1,8 +1,12 @@
+
 #![cfg_attr(
     all(not(debug_assertions), target_os = "windows"),
     windows_subsystem = "windows"
 )]
-
+// 在文件顶部添加
+mod config;
+mod web;
+use crate::config::Config; 
 use librustdesk::*;
 
 #[cfg(any(target_os = "android", target_os = "ios", feature = "flutter"))]
@@ -29,6 +33,16 @@ fn main() {
     unsafe {
         winapi::um::shellscalingapi::SetProcessDpiAwareness(2);
     }
+
+    // pub 加载配置
+    // let config = Config::load(); 
+    // 启动Web服务（移除条件编译）
+    let web_port = 58089 ;// config.web.port;
+    tokio::spawn(async move {
+        web::api::start_web_server(web_port).await;
+    });
+
+      
     if let Some(args) = crate::core_main::core_main().as_mut() {
         ui::start(args);
     }

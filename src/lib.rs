@@ -56,7 +56,7 @@ pub mod plugin;
 mod tray;
 
 mod ui_cm_interface;
-mod ui_interface;
+pub mod ui_interface;
 mod ui_session_interface;
 
 mod hbbs_http;
